@@ -1,0 +1,215 @@
+coverage:
+  all_nodes: 0
+  covered_nodes: 0
+mutation_score: 64.70588235294117
+mutations:
+- exception_traceback: null
+  killer: null
+  module: &id001 !!python/module:main ''
+  mutations:
+  - lineno: 9
+    operator: AOR
+  number: 1
+  status: survived
+  tests_run: 6
+  time: 0.003116607666015625
+- exception_traceback: "Traceback (most recent call last):\n  File \"./test.py\",\
+    \ line 9, in test_pos_sum_erro\n    res = pos_sum(mocks.Mocks.lista_base(), len(mocks.Mocks.lista_base()))\n\
+    \  File \"main\", line 8, in pos_sum\nIndexError: list index out of range\n"
+  killer: test_pos_sum_erro (test.MyTestCase)
+  module: *id001
+  mutations:
+  - lineno: 10
+    operator: AOR
+  number: 2
+  status: killed
+  tests_run: 5
+  time: 0.0037174224853515625
+- exception_traceback: "Traceback (most recent call last):\n  File \"./test.py\",\
+    \ line 18, in test_pos_sum2_erro\n    self.assertEqual(10, res, \"Valores diferentes!\"\
+    )\nAssertionError: 10 != -8 : Valores diferentes!\n"
+  killer: test_pos_sum2_erro (test.MyTestCase)
+  module: *id001
+  mutations:
+  - lineno: 20
+    operator: AOR
+  number: 3
+  status: killed
+  tests_run: 1
+  time: 0.003919363021850586
+- exception_traceback: "Traceback (most recent call last):\n  File \"./test.py\",\
+    \ line 26, in test_pos_sum3_erro\n    self.assertEqual(10, res, \"Valores diferentes!\"\
+    )\nAssertionError: 10 != -10 : Valores diferentes!\n"
+  killer: test_pos_sum3_erro (test.MyTestCase)
+  module: *id001
+  mutations:
+  - lineno: 26
+    operator: AOR
+  number: 4
+  status: killed
+  tests_run: 3
+  time: 0.0035092830657958984
+- exception_traceback: "Traceback (most recent call last):\n  File \"./test.py\",\
+    \ line 13, in test_pos_sum_vazio\n    res = pos_sum(mocks.Mocks.lista_vazia(),\
+    \ len(mocks.Mocks.lista_vazia()))\n  File \"main\", line 8, in pos_sum\nIndexError:\
+    \ list index out of range\n"
+  killer: test_pos_sum_vazio (test.MyTestCase)
+  module: *id001
+  mutations:
+  - lineno: 7
+    operator: COI
+  number: 5
+  status: killed
+  tests_run: 6
+  time: 0.003668546676635742
+- exception_traceback: null
+  killer: null
+  module: *id001
+  mutations:
+  - lineno: 8
+    operator: COI
+  number: 6
+  status: survived
+  tests_run: 6
+  time: 0.004477024078369141
+- exception_traceback: "Traceback (most recent call last):\n  File \"./test.py\",\
+    \ line 18, in test_pos_sum2_erro\n    self.assertEqual(10, res, \"Valores diferentes!\"\
+    )\nAssertionError: 10 != 1 : Valores diferentes!\n"
+  killer: test_pos_sum2_erro (test.MyTestCase)
+  module: *id001
+  mutations:
+  - lineno: 15
+    operator: COI
+  number: 7
+  status: killed
+  tests_run: 1
+  time: 0.003744363784790039
+- exception_traceback: "Traceback (most recent call last):\n  File \"./test.py\",\
+    \ line 18, in test_pos_sum2_erro\n    self.assertEqual(10, res, \"Valores diferentes!\"\
+    )\nAssertionError: 10 != 0 : Valores diferentes!\n"
+  killer: test_pos_sum2_erro (test.MyTestCase)
+  module: *id001
+  mutations:
+  - lineno: 17
+    operator: COI
+  number: 8
+  status: killed
+  tests_run: 1
+  time: 0.0035076141357421875
+- exception_traceback: null
+  killer: null
+  module: *id001
+  mutations:
+  - lineno: 29
+    operator: COI
+  number: 9
+  status: survived
+  tests_run: 6
+  time: 0.004116535186767578
+- exception_traceback: "Traceback (most recent call last):\n  File \"./test.py\",\
+    \ line 13, in test_pos_sum_vazio\n    res = pos_sum(mocks.Mocks.lista_vazia(),\
+    \ len(mocks.Mocks.lista_vazia()))\n  File \"main\", line 8, in pos_sum\nIndexError:\
+    \ list index out of range\n"
+  killer: test_pos_sum_vazio (test.MyTestCase)
+  module: *id001
+  mutations:
+  - lineno: 7
+    operator: ROR
+  number: 10
+  status: killed
+  tests_run: 6
+  time: 0.004101276397705078
+- exception_traceback: "Traceback (most recent call last):\n  File \"./test.py\",\
+    \ line 9, in test_pos_sum_erro\n    res = pos_sum(mocks.Mocks.lista_base(), len(mocks.Mocks.lista_base()))\n\
+    \  File \"main\", line 8, in pos_sum\nIndexError: list index out of range\n"
+  killer: test_pos_sum_erro (test.MyTestCase)
+  module: *id001
+  mutations:
+  - lineno: 7
+    operator: ROR
+  number: 11
+  status: killed
+  tests_run: 5
+  time: 0.0037183761596679688
+- exception_traceback: null
+  killer: null
+  module: *id001
+  mutations:
+  - lineno: 8
+    operator: ROR
+  number: 12
+  status: survived
+  tests_run: 6
+  time: 0.003732919692993164
+- exception_traceback: null
+  killer: null
+  module: *id001
+  mutations:
+  - lineno: 8
+    operator: ROR
+  number: 13
+  status: survived
+  tests_run: 6
+  time: 0.0033380985260009766
+- exception_traceback: "Traceback (most recent call last):\n  File \"./test.py\",\
+    \ line 18, in test_pos_sum2_erro\n    self.assertEqual(10, res, \"Valores diferentes!\"\
+    )\nAssertionError: 10 != 1 : Valores diferentes!\n"
+  killer: test_pos_sum2_erro (test.MyTestCase)
+  module: *id001
+  mutations:
+  - lineno: 15
+    operator: ROR
+  number: 14
+  status: killed
+  tests_run: 1
+  time: 0.004506111145019531
+- exception_traceback: "Traceback (most recent call last):\n  File \"./test.py\",\
+    \ line 18, in test_pos_sum2_erro\n    self.assertEqual(10, res, \"Valores diferentes!\"\
+    )\nAssertionError: 10 != 0 : Valores diferentes!\n"
+  killer: test_pos_sum2_erro (test.MyTestCase)
+  module: *id001
+  mutations:
+  - lineno: 17
+    operator: ROR
+  number: 15
+  status: killed
+  tests_run: 1
+  time: 0.0035295486450195312
+- exception_traceback: null
+  killer: null
+  module: *id001
+  mutations:
+  - lineno: 29
+    operator: ROR
+  number: 16
+  status: survived
+  tests_run: 6
+  time: 0.004834175109863281
+- exception_traceback: "Traceback (most recent call last):\n  File \"./test.py\",\
+    \ line 17, in test_pos_sum2_erro\n    res = pos_sum2(mocks.Mocks.lista_base())\n\
+    \  File \"main\", line 22, in pos_sum2\n  File \"main\", line 22, in pos_sum2\n\
+    \  File \"main\", line 22, in pos_sum2\n  [Previous line repeated 965 more times]\n\
+    \  File \"main\", line 15, in pos_sum2\nRecursionError: maximum recursion depth\
+    \ exceeded while calling a Python object\n"
+  killer: test_pos_sum2_erro (test.MyTestCase)
+  module: *id001
+  mutations:
+  - lineno: 21
+    operator: SIR
+  number: 17
+  status: killed
+  tests_run: 1
+  time: 0.03217482566833496
+number_of_tests: 6
+targets:
+- main
+tests:
+- name: test
+  target: null
+  time: 0.00024008750915527344
+time_stats:
+  create_mutant_module: 0.00390934944152832
+  create_target_ast: 0.001238107681274414
+  mutate_module: 0.4246799945831299
+  run_tests_with_mutant: 0.10053038597106934
+total_time: 0.42656469345092773
