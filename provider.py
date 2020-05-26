@@ -1,4 +1,4 @@
-class Mocks:
+class Provider:
 
     @staticmethod
     def lista_vazia():
@@ -15,6 +15,15 @@ class Mocks:
     @staticmethod
     def msg_erro_lista_vazia():
         return "Erro em lista vazia!"
+
+    @staticmethod
+    def pos_sum_1():
+        return lambda : (
+            (0, []),
+            (1, [1, -1, 0]),
+            (3, [1,2]),
+            (10, [1,2,3,-10,-20,4])
+        )
 
     @staticmethod
     def expected_found():

@@ -2,3 +2,4 @@
 venv
 test-report.yml
 reports
+__pycache__/

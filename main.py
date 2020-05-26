@@ -3,7 +3,7 @@ import functools
 # versão livro todo: identificar falhas
 def pos_sum(a, num_of_entries):
     sum = 0
-    i = 0 # todo: pra gerar erro!
+    i = 0 # todo: no livro está com índice diferente - pra gerar erro!
     while(i < num_of_entries):
         if(a[i] > 0):
             sum = sum + a[i]
@@ -38,5 +38,5 @@ if __name__ == '__main__':
     print("Tamanho da lista: ", len(lista))
     print("func1: ", pos_sum(lista, 4))
     print("func2: ", pos_sum2(lista.copy()))
-    print("func3: ", pos_sum3(lista, 0))
+    print("func3: ", pos_sum3(lista))
     print("func4: ", pos_sum1(lista))

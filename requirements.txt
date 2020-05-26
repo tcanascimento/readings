@@ -1,3 +1,4 @@
 mutpy==0.6.1
 unittest-dataprovider==1.0.3
 pyunitreport==0.1.4
+radon==4.1.0

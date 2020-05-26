@@ -1,1 +1,1 @@
-mut.py --target main --unit-test test -m -r test-report.yml
+mut.py --target main --unit-test test -e -c -m --report-html reports/mut
