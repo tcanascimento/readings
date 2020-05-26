@@ -1,9 +1,9 @@
 import functools
 
-# versão livro
+# versão livro todo: identificar falhas
 def pos_sum(a, num_of_entries):
     sum = 0
-    i = 1 # todo: pra gerar erro!
+    i = 0 # todo: pra gerar erro!
     while(i < num_of_entries):
         if(a[i] > 0):
             sum = sum + a[i]
@@ -27,11 +27,6 @@ def pos_sum2(a):
         return 0
     else:
         return a[0]
-
-#
- # head, *tail = files_list
- #        if func(head):
- #            return True
 
 # versão funcional -> not so good
 def pos_sum3(seq, initial = 0):

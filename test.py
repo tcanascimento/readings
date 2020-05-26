@@ -1,34 +1,33 @@
 import unittest
 
-from main import pos_sum, pos_sum2, pos_sum3
+from main import pos_sum, pos_sum2, pos_sum3, pos_sum1
+from unittest_data_provider import data_provider
 import mocks
+from pyunitreport import HTMLTestRunner
 
 class MyTestCase(unittest.TestCase):
 
-    def test_pos_sum_erro(self):
-        res = pos_sum(mocks.Mocks.lista_base(), len(mocks.Mocks.lista_base()))
-        self.assertNotEqual(10, res, "Valores diferentes!")
+    @data_provider(mocks.Mocks.expected_found())
+    def test_pos_sum(self, expected, found):
+        res = pos_sum(found, len(found))
+        self.assertNotEqual(expected, res, mocks.Mocks.msg_valores_diferentes())
 
-    def test_pos_sum_vazio(self):
-        res = pos_sum(mocks.Mocks.lista_vazia(), len(mocks.Mocks.lista_vazia()))
-        self.assertEqual(0, res, "Erro em lista vazia!")
+    @data_provider(mocks.Mocks.expected_found())
+    def test_pos_sum1(self, expected, found):
+        res = pos_sum1(found)
+        self.assertEqual(expected, res, mocks.Mocks.msg_valores_diferentes())
 
-    def test_pos_sum2_erro(self):
-        res = pos_sum2(mocks.Mocks.lista_base())
-        self.assertEqual(10, res, "Valores diferentes!")
+    @data_provider(mocks.Mocks.expected_found())
+    def test_pos_sum2(self, expected, found):
+        res = pos_sum2(found)
+        self.assertEqual(expected, res, mocks.Mocks.msg_valores_diferentes())
 
-    def test_pos_sum2_vazio(self):
-        res = pos_sum2(mocks.Mocks.lista_vazia())
-        self.assertEqual(0, res, "Erro em lista vazia!")
+    @data_provider(mocks.Mocks.expected_found())
+    def test_pos_sum3(self, expected, found):
+        res = pos_sum3(found, 0)
+        self.assertEqual(expected, res, mocks.Mocks.msg_valores_diferentes())
 
-    def test_pos_sum3_erro(self):
-        res = pos_sum3(mocks.Mocks.lista_base(), 0)
-        self.assertEqual(10, res, "Valores diferentes!")
-
-    def test_pos_sum3_vazio(self):
-        res = pos_sum3(mocks.Mocks.lista_vazia(), 0)
-        self.assertEqual(0, res, "Erro em lista vazia!")
 
 
 if __name__ == '__main__':
-    unittest.main()
+    unittest.main(testRunner=HTMLTestRunner(output='test-reports'))
