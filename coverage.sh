@@ -1,0 +1,1 @@
+coverage run main.py && coverage html -d reports/coverage
