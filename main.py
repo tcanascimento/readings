@@ -10,16 +10,28 @@ def pos_sum(a, num_of_entries):
         i = i + 1
     return sum
 
+# versão melhorada
+def pos_sum1(a):
+    sum = 0
+    for i in a:
+        sum += i
+    return sum
+
 # versão recursiva
 def pos_sum2(a):
-    if len(a) == 1:
-        return a[0]
+    if len(a) >  1:
+        head, *tail = a
+        tail[0] = tail[0] + head
+        return pos_sum2(tail)
     elif a == []:
         return 0
     else:
-        a[1] = a[0] + a[1]
-        list = a[1:]
-        return pos_sum2(list)
+        return a[0]
+
+#
+ # head, *tail = files_list
+ #        if func(head):
+ #            return True
 
 # versão funcional -> not so good
 def pos_sum3(seq, initial = 0):
@@ -30,5 +42,6 @@ if __name__ == '__main__':
     lista = [1,2,3,4]
     print("Tamanho da lista: ", len(lista))
     print("func1: ", pos_sum(lista, 4))
-    print("func2: ", pos_sum2(lista))
-    print("func3: ", pos_sum3([1,2,3,4], 0))
+    print("func2: ", pos_sum2(lista.copy()))
+    print("func3: ", pos_sum3(lista, 0))
+    print("func4: ", pos_sum1(lista))
