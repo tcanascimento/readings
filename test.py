@@ -1,9 +1,8 @@
 import unittest
 
-from main import pos_sum, pos_sum2, pos_sum3, pos_sum1
-from unittest_data_provider import data_provider
 import provider
-from pyunitreport import HTMLTestRunner
+from main import pos_sum, pos_sum2, pos_sum3, pos_sum1
+
 
 class MyTestCase(unittest.TestCase):
 
@@ -27,7 +26,3 @@ class MyTestCase(unittest.TestCase):
         res = pos_sum3(found)
         self.assertEqual(expected, res, provider.Provider.msg_valores_diferentes())
 
-
-
-if __name__ == '__main__':
-    unittest.main(testRunner=HTMLTestRunner(output='test-reports'))
