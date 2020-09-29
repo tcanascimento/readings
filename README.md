@@ -7,6 +7,18 @@
 <li>Relatórios => <i>verifique:</i><code>/reports/test-reports/</code> </li>
 </ul>
 
+### Testes de integração
+Capitulos 6.8 - 6.12 do livro Pratical Software Testing  
+<pre>
+<i>Instalar os pacotes do arquivo:</i><code>requirements.txt</code>
+</pre>
+<ul>
+<li>Módulo agenda contém um exemplo de stubs</li>
+<li>Testes de integração => <i>execute:</i><code>python3 -m pytest</code></li>
+</ul>
+
+
+
 <h2>Referências<h2>
 
 <h4>
