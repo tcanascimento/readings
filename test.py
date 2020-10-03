@@ -1,5 +1,7 @@
 import unittest
 
+from unittest_dataprovider import data_provider
+
 import provider
 from main import pos_sum, pos_sum2, pos_sum3, pos_sum1
 
