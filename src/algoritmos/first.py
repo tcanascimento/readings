@@ -21,7 +21,27 @@ def insertion_sort(list):
         list[i+1] = chave                   # custo c8 n - 1
 
 
-# Press the green button in the gutter to run the script.
+def fib_rec(n):
+    if n <= 1:
+        return 1
+    else:
+        return fib_rec(n - 1) + fib_rec(n - 2)
+
+
+def fib(n):
+    a = 0
+    p = 1
+    if n == 1:
+        return 0
+    elif n == 2:
+        return 1
+    else:
+        for i in range(n):
+            aux = p
+            p = a + p
+            a = aux
+        return p
+
 if __name__ == '__main__':
     lista = random_list()
     print(lista)
@@ -29,3 +49,4 @@ if __name__ == '__main__':
     lista = list(lista)
     insertion_sort(lista)
     print(lista)
+
