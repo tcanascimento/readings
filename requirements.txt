@@ -4,4 +4,4 @@ pyunitreport==0.1.4
 radon==4.3.2
 coverage==5.3
 pytest==6.1.0
-requests==2.24.0
+requests==2.31.0
